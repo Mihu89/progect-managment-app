@@ -1,13 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <v-app>
+    <v-main class="ma-4">
+      <Navbar/>
+    <!-- <div id="nav">
       <router-link to="/">Dasboard</router-link> |
       <router-link to="/projects">Projects</router-link>
       <router-link to="/team">Team</router-link>
-    </div>
-    <router-view/>
-  </div>
+    </div> -->
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
+<script>
+import Navbar from '@/components/Navbar'
+export default {
+  name: 'App',
+  components: {
+    Navbar
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
